@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="hostelc.css">
+</head>
+<body>
+<header>
+    
+</header>
+
+<main>
+    <h2>Select Payment Method</h2>
+
+    <form action="payment-processing.php" method="POST">
+        <div class="payment-options">
+            <input type="radio" id="C/V-card" name="payment-method" value="C/V-card" checked>
+            <label for="C/V-card">Credit Card/Visa Card</label>
+            <input type="radio" id="tng" name="payment-method" value="tng">
+            <label for="tng">TNG</label>
+            <input type="radio" id="paypal" name="payment-method" value="paypal">
+            <label for="paypal">PayPal</label>
+        </div>
+
+        <div id="credit-card-info">
+            <h3>Credit Card Information<span id="card-indication" style="font-size: small; color: red;">*If you choose to pay by credit card or visa card</span></h3>
+            <p id="card-name">Cardholder Name:<input type="text" id="card-name" name="card-name" required></p>
+            <p id="card-number">Card Number:<input type="text" id="card-number" name="card-number" pattern="[0-9]{16}" required></p>                   
+            <p id="card-expiry">Expiration Date:<input type="text" id="card-expiry" name="card-expiry" placeholder="MM/YY"  required></p>          
+            <p id="card-cvv">Security Code:<input type="text" id="card-cvv" name="card-cvv" pattern="[0-9]{3}" required></p>
+        </div>
+    </form>
+</main>
+
+<footer>
+    <button>Confirm Payment</button>
+</footer>
+
+</body>
+</html>
